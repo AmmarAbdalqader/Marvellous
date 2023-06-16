@@ -28,7 +28,7 @@ class MarvelCharacters {
         //     .toList(),
       );
 
-  static Future<List<MarvelCharacters>> getCharacters() async {
+  static Future<List<MarvelCharacters>> fetchCharacters() async {
     List<MarvelCharacters> list = [];
     try {
       var res = await ApiHttp.get(

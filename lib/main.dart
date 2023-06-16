@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Marvellous app',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.indigo, /* brightness: Brightness.dark*/
+        ),
         useMaterial3: true,
       ),
       getPages: AppPages.pages,
