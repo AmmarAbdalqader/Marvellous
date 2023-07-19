@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import '../models/marvel_characters.dart';
-import '../models/marvel_movies.dart';
+// import '../models/marvel_movies.dart';
 import '../models/marvel_series.dart';
 
 class HomeController extends GetxController with StateMixin {

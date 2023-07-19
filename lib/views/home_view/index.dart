@@ -1,6 +1,6 @@
 import 'package:animated_card/animated_card.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+// import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
@@ -9,7 +9,7 @@ import 'package:marvel/models/marvel_characters.dart';
 import 'package:marvel/models/marvel_movies.dart';
 import 'package:marvel/models/marvel_series.dart';
 import 'package:shimmer/shimmer.dart';
-import '../../constants/app_colors.dart';
+// import '../../constants/app_colors.dart';
 import '../../controllers/home_controller.dart';
 import 'components/character_tile.dart';
 
@@ -445,17 +445,17 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  Widget _buildErrorMessage(String message) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Text(
-          message,
-          style: const TextStyle(fontSize: 16, color: Colors.red),
-        ),
-      ),
-    );
-  }
+  // Widget _buildErrorMessage(String message) {
+  //   return Center(
+  //     child: Padding(
+  //       padding: const EdgeInsets.all(16.0),
+  //       child: Text(
+  //         message,
+  //         style: const TextStyle(fontSize: 16, color: Colors.red),
+  //       ),
+  //     ),
+  //   );
+  // }
 
   Widget _buildCharacterList(List<MarvelCharacters> characters) {
     return Expanded(
@@ -515,61 +515,61 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  Widget _buildMovieList(List<MarvelMovies> movies) {
-    return SizedBox(
-      height: 220,
-      child: CardSwiper(
-        cardsCount: movies.length,
-        cardBuilder: (BuildContext context, int index) {
-          final movie = movies[index];
-          return AnimatedCard(
-            direction: AnimatedCardDirection.bottom,
-            initDelay: const Duration(milliseconds: 200),
-            duration: const Duration(seconds: 1),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16.0),
-                ),
-                elevation: 4,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Container(
-                      height: 120,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(movie.posterUrl),
-                          fit: BoxFit.cover,
-                        ),
-                        borderRadius: const BorderRadius.vertical(
-                            top: Radius.circular(16.0)),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: DefaultTextStyle(
-                        style: const TextStyle(fontWeight: FontWeight.bold),
-                        child: AnimatedTextKit(
-                          animatedTexts: [
-                            TypewriterAnimatedText(movie.title),
-                          ],
-                          isRepeatingAnimation: false,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          );
-        },
-        // viewportFraction: 0.6,
-        scale: 0.9,
-      ),
-    );
-  }
+  // Widget _buildMovieList(List<MarvelMovies> movies) {
+  //   return SizedBox(
+  //     height: 220,
+  //     child: CardSwiper(
+  //       cardsCount: movies.length,
+  //       cardBuilder: (BuildContext context, int index) {
+  //         final movie = movies[index];
+  //         return AnimatedCard(
+  //           direction: AnimatedCardDirection.bottom,
+  //           initDelay: const Duration(milliseconds: 200),
+  //           duration: const Duration(seconds: 1),
+  //           child: Padding(
+  //             padding: const EdgeInsets.all(8.0),
+  //             child: Card(
+  //               shape: RoundedRectangleBorder(
+  //                 borderRadius: BorderRadius.circular(16.0),
+  //               ),
+  //               elevation: 4,
+  //               child: Column(
+  //                 crossAxisAlignment: CrossAxisAlignment.stretch,
+  //                 children: [
+  //                   Container(
+  //                     height: 120,
+  //                     decoration: BoxDecoration(
+  //                       image: DecorationImage(
+  //                         image: NetworkImage(movie.posterUrl),
+  //                         fit: BoxFit.cover,
+  //                       ),
+  //                       borderRadius: const BorderRadius.vertical(
+  //                           top: Radius.circular(16.0)),
+  //                     ),
+  //                   ),
+  //                   Padding(
+  //                     padding: const EdgeInsets.all(8.0),
+  //                     child: DefaultTextStyle(
+  //                       style: const TextStyle(fontWeight: FontWeight.bold),
+  //                       child: AnimatedTextKit(
+  //                         animatedTexts: [
+  //                           TypewriterAnimatedText(movie.title),
+  //                         ],
+  //                         isRepeatingAnimation: false,
+  //                       ),
+  //                     ),
+  //                   ),
+  //                 ],
+  //               ),
+  //             ),
+  //           ),
+  //         );
+  //       },
+  //       // viewportFraction: 0.6,
+  //       scale: 0.9,
+  //     ),
+  //   );
+  // }
 
   Widget _buildSeriesList(List<MarvelSeries> seriesList) {
     return Expanded(

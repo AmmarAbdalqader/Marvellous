@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:marvel/constants/app_colors.dart';
+// import 'package:flutter/material.dart';
+// import 'package:marvel/constants/app_colors.dart';
 import 'package:marvel/models/marvel_characters.dart';
 
 class CharacterTile extends StatelessWidget {
